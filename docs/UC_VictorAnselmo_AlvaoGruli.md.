@@ -124,6 +124,117 @@
 **Requisitos Funcionais Relacionados:** [Ex: RF-06]
 **Requisitos Não Funcionais Relacionados:** [Ex: RNF-06]
 **Regras de Negócio Relacionadas:** [Ex: RN-05]
+# UC06 - Cancelar Plano de Treino
+
+**Atores:** Recepcionista, Gerente.
+**Pré-condições:** Aluno com plano ativo.
+**Pós-condições:** Plano desativado e acesso programado para bloqueio.
+
+**Fluxo Principal:**
+1. O usuário seleciona "Cancelar Plano" no perfil do aluno.
+2. O sistema solicita e o usuário insere o motivo.
+3. O sistema calcula possíveis taxas rescisórias e exibe o resumo.
+4. O usuário confirma o cancelamento.
+5. O sistema atualiza o status para "Cancelado".
+
+**Fluxos Alternativos:**
+**FA01 - Cancelamento não autorizado (Passo 4):**
+  1. O sistema exige senha do Gerente para isentar multas.
+
+**Requisitos Funcionais Relacionados:** [Ex: RF-07]
+**Requisitos Não Funcionais Relacionados:** [Ex: RNF-07]
+**Regras de Negócio Relacionadas:** [Ex: RN-06]
+
+---
+
+# UC07 - Registrar Pagamento de Mensalidade
+
+**Atores:** Recepcionista.
+**Pré-condições:** Aluno com cobrança pendente e caixa aberto.
+**Pós-condições:** Cobrança baixada e recibo gerado.
+
+**Fluxo Principal:**
+1. A recepcionista seleciona a cobrança pendente do aluno.
+2. O sistema solicita a forma de pagamento (Dinheiro, Pix, Cartão).
+3. A recepcionista seleciona e confirma o recebimento.
+4. O sistema atualiza a cobrança para "Pago".
+5. O sistema gera o recibo digital.
+
+**Fluxos Alternativos:**
+**FA01 - Pagamento Parcial (Passo 3):**
+  1. O sistema registra parte do valor e mantém status "Parcialmente Pago".
+
+**Requisitos Funcionais Relacionados:** [Ex: RF-08]
+**Requisitos Não Funcionais Relacionados:** [Ex: RNF-08]
+**Regras de Negócio Relacionadas:** [Ex: RN-07]
+
+---
+
+# UC08 - Processar Pagamento Automático (Cartão de Crédito)
+
+**Atores:** Sistema.
+**Pré-condições:** Plano recorrente ativo com cartão cadastrado.
+**Pós-condições:** Mensalidade debitada e plano renovado.
+
+**Fluxo Principal:**
+1. O sistema identifica a cobrança na data de vencimento.
+2. O sistema envia a requisição para o Gateway de Pagamento.
+3. O Gateway processa e retorna sucesso.
+4. O sistema atualiza a fatura para "Pago" e renova o plano.
+5. O sistema envia e-mail de confirmação.
+
+**Fluxos Alternativos:**
+**FA01 - Transação Recusada (Passo 3):**
+  1. O sistema mantém fatura "Pendente", envia e-mail e agenda nova tentativa.
+
+**Requisitos Funcionais Relacionados:** [Ex: RF-09]
+**Requisitos Não Funcionais Relacionados:** [Ex: RNF-09]
+**Regras de Negócio Relacionadas:** [Ex: RN-08]
+
+---
+
+# UC09 - Consultar Histórico de Pagamentos
+
+**Atores:** Aluno, Recepcionista.
+**Pré-condições:** Usuário autenticado.
+**Pós-condições:** Histórico financeiro exibido.
+
+**Fluxo Principal:**
+1. O usuário acessa a área de histórico financeiro.
+2. O sistema busca e exibe a lista de faturas geradas.
+3. O usuário clica em uma fatura para ver os detalhes.
+4. O sistema exibe detalhes e opções de recibo/pagamento.
+
+**Fluxos Alternativos:**
+**FA01 - Nenhum histórico (Passo 2):**
+  1. O sistema exibe aviso de que não há faturas.
+
+**Requisitos Funcionais Relacionados:** [Ex: RF-10]
+**Requisitos Não Funcionais Relacionados:** [Ex: RNF-10]
+**Regras de Negócio Relacionadas:** [Ex: RN-09]
+
+---
+
+# UC10 - Validar Acesso de Aluno via RFID
+
+**Atores:** Sistema de Catraca (API externa).
+**Pré-condições:** Aluno aproxima tag RFID do leitor.
+**Pós-condições:** Acesso registrado e catraca destravada.
+
+**Fluxo Principal:**
+1. O Sistema de Catraca envia o código RFID para o FitPass.
+2. O sistema busca o aluno e verifica se o plano está ativo.
+3. O sistema registra o "Check-in".
+4. O sistema envia o comando "Acesso Liberado".
+5. A catraca física é destravada.
+
+**Fluxos Alternativos:**
+**FA01 - Tag não reconhecida (Passo 2):**
+  1. O sistema envia "Acesso Negado" e a catraca não abre.
+
+**Requisitos Funcionais Relacionados:** [Ex: RF-11]
+**Requisitos Não Funcionais Relacionados:** [Ex: RNF-11]
+**Regras de Negócio Relacionadas:** [Ex: RN-10]
 # UC11 - Bloquear Acesso por Inadimplência
 
 **Atores:** Sistema, Sistema de Catraca.
@@ -340,3 +451,4 @@
 **Requisitos Funcionais Relacionados:** [Ex: RF-21]
 **Requisitos Não Funcionais Relacionados:** [Ex: RNF-21]
 **Regras de Negócio Relacionadas:** [Ex: RN-20]
+
