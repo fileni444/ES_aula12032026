@@ -1,13 +1,13 @@
 # Entrega – Documento de Casos de Uso e Diagramas
 
 ## Identificação da Dupla
-- Aluno 1:
-- Aluno 2:
+- Aluno 1: Calebe Moraes (Ciencia da Computação)
+- Aluno 2: Marcio Soares (ADS)
 
 ## Arquivos Entregues
 
 ### Documento de Casos de Uso
-Nome do arquivo entregue: UC_nomealuno1_nomealuno2.md
+Nome do arquivo entregue: UC_CalebeMoraes_MarcioSoares.md
 
 ### Diagramas de Casos de Uso
 Arquivos entregues (PNG): DUC_XX_nomealuno1_nomealuno2.png, DUC_YY_nomealuno1_nomealuno2.png (Adicionar todos os diagramas enviados).
@@ -23,7 +23,7 @@ Arquivos entregues (PNG): DUC_XX_nomealuno1_nomealuno2.png, DUC_YY_nomealuno1_no
 Marque cada linha após confirmar:
 
 - [ ] O documento contém **20 casos de uso completos**, seguindo o template do arquivo `/docs/casosdeuso.md`
-- [ ] O nome do arquivo segue o padrão exigido
+- [x] O nome do arquivo segue o padrão exigido
 - [ ] Os diagramas representam **todos os casos de uso listados** no documento
 - [ ] Todos os diagramas estão em **formato PNG**
 - [ ] As Issues foram referenciadas corretamente
