@@ -1,0 +1,11 @@
+@startuml DUC_04_CalebeMoraes_MarcioSoares
+left to right direction
+actor "Gerente" as Ger
+
+rectangle "FitPass - Ações do Gerente" {
+    Ger -- (UC02: Manter Planos)
+    Ger -- (UC09: Gerar Relatório Inadimplência)
+    Ger -- (UC13: Configurar Horários Aulas)
+    Ger -- (UC17: Relatório Frequência)
+}
+@enduml
