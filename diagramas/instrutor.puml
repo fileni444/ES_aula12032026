@@ -1,0 +1,10 @@
+@startuml DUC_04_CalebeMoraes_MarcioSoares
+left to right direction
+actor "Instrutor" as Ins
+
+rectangle "FitPass - Ações do Instrutor" {
+    Ins -- (UC06: Registrar Presença)
+    Ins -- (UC07: Realizar Avaliação Física)
+    Ins -- (UC18: Atribuir Treino)
+}
+@enduml
