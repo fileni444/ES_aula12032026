@@ -1,0 +1,50 @@
+@startuml
+
+left to right direction
+
+actor Aluno
+actor Recepcionista
+actor Instrutor
+actor Gerente
+actor "Sistema de Catraca" as Catraca
+
+rectangle "FitPass Gym Management" {
+
+(Cadastrar Aluno) as UC01
+(Gerenciar Planos) as UC02
+(Registrar Pagamento) as UC03
+(Verificar Regularidade) as UC04
+(Validar Acesso) as UC05
+(Consultar Horários de Aula) as UC06
+(Agendar Aula) as UC07
+(Cancelar Agendamento) as UC08
+(Registrar Presença) as UC09
+(Registrar Avaliação Física) as UC10
+(Emitir Relatórios) as UC11
+(Enviar Notificações) as UC12
+
+Recepcionista -- UC01
+Recepcionista -- UC03
+
+Gerente -- UC02
+Gerente -- UC11
+
+Instrutor -- UC09
+Instrutor -- UC10
+
+Aluno -- UC06
+Aluno -- UC07
+Aluno -- UC08
+Aluno -- UC05
+
+Catraca -- UC05
+
+UC03 --> UC04 : <<include>>
+UC05 --> UC04 : <<include>>
+
+UC07 --> UC12 : <<extend>>
+UC10 --> UC12 : <<extend>>
+
+}
+
+@enduml
