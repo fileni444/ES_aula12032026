@@ -1,9 +1,14 @@
 # DIAGRAMAÇÃO
-<img width="418" height="404" alt="image" src="https://github.com/user-attachments/assets/be053ac7-1c8b-458e-bec8-ac3532ce648a" />
+<img width="646" height="412" alt="image" src="https://github.com/user-attachments/assets/f3bcf9ef-113f-441d-8aaa-306150ddf93f" />
 Diagrama Recepcionista
 <img width="418" height="404" alt="image" src="https://github.com/user-attachments/assets/08145321-8d66-4992-a0e8-e569741eb731" />
 Diagrama Aluno
-
+<img width="680" height="457" alt="image" src="https://github.com/user-attachments/assets/7f13a64e-af81-4ae8-9a18-a461542fe074" />
+Diagrama API
+<img width="524" height="449" alt="image" src="https://github.com/user-attachments/assets/92f7c4db-9e8c-4c3b-98a3-ad4bf8cbc36c" />
+Diagrama Gerente
+<img width="489" height="394" alt="image" src="https://github.com/user-attachments/assets/82ed64e7-92ba-4ca0-a588-aa0d5f53204d" />
+Diagrama Instrutor
 
 ---
 # CASOS DE USO
