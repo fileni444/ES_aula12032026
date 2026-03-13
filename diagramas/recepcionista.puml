@@ -1,0 +1,13 @@
+@startuml DUC_02_CalebeMoraes_MarcioSoares
+left to right direction
+actor "Recepcionista" as Rec
+
+rectangle "FitPass - Ações do Recepcionista" {
+    Rec -- (UC01: Efetuar Matrícula)
+    Rec -- (UC03: Registrar Pagamento)
+    Rec -- (UC10: Cancelar Matrícula)
+    Rec -- (UC11: Trancar Plano)
+    Rec -- (UC15: Emitir Comprovante)
+    Rec -- (UC16: Registrar Entrada Manual)
+}
+@enduml
